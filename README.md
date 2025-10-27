@@ -1,6 +1,6 @@
 # 🔒 SQLeet Database Encryption in C# WinForms
 
-This project demonstrates how to secure an SQLite database using **SQLeet encryption** inside a **C# WinForms application**.  
+This project demonstrates how to secure an SQLite database using **SQLeet encryption ** (https://github.com/resilar/sqleet?tab=readme-ov-file#example-source) inside a **C# WinForms application**.  
 The database is fully encrypted using a **fixed passphrase:** `MyStrongKey123`.
 
 ✅ Includes a **compiled `sqleet.dll` for C# integration**  
@@ -34,7 +34,7 @@ SqleetDBEncryption/
 1️⃣ WinForms UI takes employee details  
 2️⃣ `DatabaseManager.cs` opens SQLite via `sqleet.dll`  
 3️⃣ Encryption key is set: `MyStrongKey123`  
-4️⃣ DB is created (if not exists) and fully encrypted  
+4️⃣ DB is created (if not exist) and fully encrypted  
 5️⃣ Data is inserted securely into `Employees` table  
 
 ✔ Without the key, the DB cannot be opened.
@@ -105,7 +105,7 @@ sqlite> .tables
 
 | Feature          | Value           |
 |------------------|----------------|
-| Engine           | SQLeet (AES-256) |
+| Engine           | SQLeet  |
 | Key Used         | `MyStrongKey123` |
 | Applies To       | Entire DB file  |
 | Visible Without Key? | ❌ No        |
