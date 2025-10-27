@@ -14,7 +14,7 @@ The database is fully encrypted using a **fixed passphrase:** `MyStrongKey123`.
 
 
 ---
-SqleetDBEncryption/
+<pre> ```SqleetDBEncryption/
 ├── /Libs/
 │   ├── sqleet.dll          # 🔹 Custom compiled encrypted SQLite engine
 │   ├── sqleet.exe          # 🔹 CLI tool to test encrypted DB manually
@@ -27,6 +27,8 @@ SqleetDBEncryption/
 ├── employee_encrypted.db   # 🔹 Auto-created/encrypted at first run
 ├── README.md               # 📘 You're reading this!
 └── LICENSE                 # 📜 MIT License
+ ``` </pre>
+
 
 
 ## ⚙️ How It Works
