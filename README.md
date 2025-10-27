@@ -1,6 +1,6 @@
 # 🔒 SQLeet Database Encryption in C# WinForms
 
-This project demonstrates how to secure an SQLite database using **SQLeet encryption ** (https://github.com/resilar/sqleet?tab=readme-ov-file#example-source) inside a **C# WinForms application**.  
+This project demonstrates how to secure an SQLite database using **SQLeet encryption ** (https://github.com/resilar/sqleet?tab=readme-ov-file#example-source) inside a **C# WinForms application**.  Kindly refer to the given git link to know about usage and encryption details =>(https://github.com/resilar/sqleet?tab=readme-ov-file#example-source)
 The database is fully encrypted using a **fixed passphrase:** `MyStrongKey123`.
 
 ✅ Includes a **compiled `sqleet.dll` for C# integration**  
@@ -50,14 +50,14 @@ You can verify encryption with the bundled CLI:
 
 
 ⚙️ How It Works (End-to-End Flow)
-[WinForms UI] 
+<pre>[WinForms UI] 
    └▶ Collects Employee Data
       └▶ DatabaseManager.cs
          └▶ Opens or creates DB using sqlite3_open_v2
          └▶ Applies encryption key using sqlite3_key
          └▶ Rekeys new DB (for first-time encryption)
          └▶ Inserts employee using encrypted SQL ops
-
+</pre>
 
 ✅ At no point is data stored unencrypted.
 ✅ Without the key MyStrongKey123, the database is unreadable.
@@ -71,8 +71,10 @@ sqleet.exe	CLI for opening/testing encrypted DB manually
 🔧 Compilation of SQLeet DLL (Already Done for You ✅)
 
 SQLeet (C-based) was compiled into a Windows DLL using GCC/MSYS2:
+<pre>
+ gcc sqleet.c -shared -o sqleet.dll
+</pre>
 
-gcc sqleet.c -shared -o sqleet.dll
 
 
 This DLL is now ready and has been shipped to/Libs/.
@@ -90,11 +92,12 @@ This DLL is now ready and has been shipped to/Libs/.
 🔍 Testing Encryption with CLI (Manual Check)
 
 To confirm encryption manually:
-
-sqleet.exe
+<pre>
+ sqleet.exe
 sqlite> .open employee_encrypted.db
 sqlite> PRAGMA key='MyStrongKey123';
 sqlite> .tables
+</pre>
 
 
 
