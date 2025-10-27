@@ -1,16 +1,19 @@
-🔒 SQLeet Encrypted Database Integration in C# (WinForms)
+# 🔒 SQLeet Database Encryption in C# WinForms
 
-This project demonstrates how to implement full database-level encryption in a C# WinForms application using SQLeet, a lightweight encryption extension for SQLite.
-The database is encrypted using the fixed key: MyStrongKey123.
+This project demonstrates how to secure an SQLite database using **SQLeet encryption** inside a **C# WinForms application**.  
+The database is fully encrypted using a **fixed passphrase:** `MyStrongKey123`.
 
-It includes:
-✅ A custom-compiled sqleet.dll
-✅ A C# wrapper (SqleetWrapper.cs) for native SQLeet functions
-✅ A managed database manager (DatabaseManager.cs)
-✅ A WinForms UI to insert and view employee data
-✅ A CLI binary (sqleet.exe) provided for manual testing & verification
+✅ Includes a **compiled `sqleet.dll` for C# integration**  
+✅ A **WinForms frontend** to add/view employees  
+✅ A **C# native wrapper (P/Invoke)** for SQLeet  
+✅ A **CLI tool (`sqleet.exe`) to verify encryption manually**
 
-📂 Project Structure
+---
+
+## 📂 Project Structure
+
+
+---
 SqleetDBEncryption/
 ├── /Libs/
 │   ├── sqleet.dll          # 🔹 Custom compiled encrypted SQLite engine
@@ -25,6 +28,25 @@ SqleetDBEncryption/
 ├── README.md               # 📘 You're reading this!
 └── LICENSE                 # 📜 MIT License
 
+
+## ⚙️ How It Works
+
+1️⃣ WinForms UI takes employee details  
+2️⃣ `DatabaseManager.cs` opens SQLite via `sqleet.dll`  
+3️⃣ Encryption key is set: `MyStrongKey123`  
+4️⃣ DB is created (if not exists) and fully encrypted  
+5️⃣ Data is inserted securely into `Employees` table  
+
+✔ Without the key, the DB cannot be opened.
+
+---
+
+## 🧪 Test Database Encryption (Using CLI)
+
+You can verify encryption with the bundled CLI:
+
+
+
 ⚙️ How It Works (End-to-End Flow)
 [WinForms UI] 
    └▶ Collects Employee Data
@@ -38,7 +60,7 @@ SqleetDBEncryption/
 ✅ At no point is data stored unencrypted.
 ✅ Without the key MyStrongKey123, the database is unreadable.
 
-📌 Key Files & Responsibilities
+## 📌 Key Files & Responsibilities
 File	Purpose
 sqleet.dll	Native SQLite engine patched with AES-256 encryption
 SqleetWrapper.cs	Bridges C# & native library (via [DllImport])
@@ -51,14 +73,14 @@ SQLeet (C-based) was compiled into a Windows DLL using GCC/MSYS2:
 gcc sqleet.c -shared -o sqleet.dll
 
 
-This DLL is now ready and shipped in /Libs/.
+This DLL is now ready and has been shipped to/Libs/.
 
-🖥️ Running the App (WinForms UI)
+## 🖥️ Running the App (WinForms UI)
 
 ✅ When the app runs for the first time:
 ✔ Creates employee_encrypted.db
 ✔ Applies encryption key (MyStrongKey123)
-✔ Creates Employees table
+✔ Creates the Employees table
 
 ✅ When inserting employees:
 ✔ Each record is encrypted transparently via engine-level encryption
@@ -73,32 +95,43 @@ sqlite> PRAGMA key='MyStrongKey123';
 sqlite> .tables
 
 
-✅ If correct key used → Employees table becomes visible
-❌ If wrong key → "file is not a database" or no tables shown
 
-🗝️ Encryption Details
-Parameter	Value
-Encryption Engine	SQLeet (AES-256-CTR)
-Page Size	4096 bytes
-Key Length	Auto-detected from UTF-8 string
-Key Used	MyStrongKey123
-📜 License (MIT)
+✅ If key is correct → `Employees` table is visible  
+❌ Otherwise → DB cannot be read
 
-This project is licensed under the MIT License, allowing:
-✅ Commercial and private use
-✅ Modification and distribution
-✅ Liability protections
+---
 
-📌 Full license text is included in LICENSE.
+## 🗝️ Encryption Info
 
-✨ Author
+| Feature          | Value           |
+|------------------|----------------|
+| Engine           | SQLeet (AES-256) |
+| Key Used         | `MyStrongKey123` |
+| Applies To       | Entire DB file  |
+| Visible Without Key? | ❌ No        |
 
-👤 Pushpasri M
-💻 Passionate about secure database systems & C# development
+---
 
-📬 Contributions & Feedback
+## 📜 License
 
-🛠 Open to suggestions! Feel free to:
-✅ Fork ⭐
-✅ Open issues
-✅ Submit PRs
+Licensed under the **MIT License**, allowing free use, modification, and distribution.
+
+---
+
+## 👩‍💻 Author
+
+**Pushpasri M**  
+💡 Focused on secure system development & C# application design.
+
+---
+
+## 💬 Contributions & Suggestions
+
+Feel free to:
+✅ ⭐ Star the project  
+✅ 🛠 Improve features  
+✅ 🐛 Report issues  
+
+---
+
+🚀 *Thank you for exploring secure database development with SQLeet + C#!*
