@@ -64,7 +64,7 @@ You can verify encryption with the bundled CLI:
 
 ## 📌 Key Files & Responsibilities
 File	Purpose
-sqleet.dll	Native SQLite engine patched with AES-256 encryption
+sqleet.dll	Native SQLite engine patched with encryption(to understand source and encryption type go to source https://github.com/resilar/sqleet?tab=readme-ov-file#example)
 SqleetWrapper.cs	Bridges C# & native library (via [DllImport])
 DatabaseManager.cs	Applies key, creates tables, inserts data
 sqleet.exe	CLI for opening/testing encrypted DB manually
