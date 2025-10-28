@@ -47,6 +47,7 @@
             this.AboutPanel = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button5 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -104,6 +105,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
@@ -111,7 +113,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(141, 425);
             this.panel2.TabIndex = 1;
-
             // 
             // button3
             // 
@@ -259,7 +260,6 @@
             this.AboutPanel.Name = "AboutPanel";
             this.AboutPanel.Size = new System.Drawing.Size(695, 425);
             this.AboutPanel.TabIndex = 0;
-            
             // 
             // label6
             // 
@@ -280,7 +280,26 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(564, 333);
             this.dataGridView1.TabIndex = 0;
-
+            // 
+            // button5
+            // 
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button5.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button5.FlatAppearance.BorderSize = 15;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button5.Image = global::EmployeeMangementForm.Properties.Resources.icons8_insert_table_24;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(0, 227);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(138, 56);
+            this.button5.TabIndex = 2;
+            this.button5.Text = "Insert";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Form1
             // 
@@ -329,5 +348,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button5;
     }
 }
