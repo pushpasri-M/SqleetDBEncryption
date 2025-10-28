@@ -12,34 +12,22 @@ using System.Xml.Linq;
 
 namespace EmployeeMangementForm
 {
-  
         public partial class Form1 : Form
         {
-
-
         public Form1()
         {
              InitializeComponent();
             // Open DB
             DatabaseManager.InitializeDatabase();
-
-           
-
-
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
-            {
-           
-
+        {
             hidePannel();
-                HomePannel.Visible = true;
-                SetActiveButton(button2);
+            HomePannel.Visible = true;
+            SetActiveButton(button2);
             try
             {
-                
-
                 // Load all employee data into the DataGridView
                 dataGridView1.DataSource = DatabaseManager.GetEmployees();
             }
@@ -48,15 +36,13 @@ namespace EmployeeMangementForm
                 MessageBox.Show("Database error: " + ex.Message);
             }
 
-            }
-
+        }
             private void hidePannel()
             {
                 HomePannel.Visible = false;
                 AboutPanel.Visible = false;
 
             }
-
            
             private void SetActiveButton(System.Windows.Forms.Button activeBtn)
             {
@@ -70,15 +56,19 @@ namespace EmployeeMangementForm
             }
             private void ApplyModernStyle(DataGridView dgv)
             {
-                dgv.EnableHeadersVisualStyles = false;
+            dgv.AllowUserToAddRows = false;
+            dgv.ReadOnly = true;
+
+            dgv.EnableHeadersVisualStyles = false;
                 dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dgv.BorderStyle = BorderStyle.None;
                 dgv.CellBorderStyle = DataGridViewCellBorderStyle.None;
                 dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                 dgv.MultiSelect = false;
                 dgv.RowHeadersVisible = false;
+                
 
-                // Row styles
+            // Row styles
                 dgv.RowsDefaultCellStyle.BackColor = Color.White;
                 dgv.RowsDefaultCellStyle.ForeColor = Color.Black;
                 dgv.RowsDefaultCellStyle.Font = new Font("Segoe UI", 10);
@@ -145,8 +135,6 @@ namespace EmployeeMangementForm
                 textBox3.Clear();
                 textBox4.Clear();
 
-
-
             }
             catch (Exception ex)
             {
@@ -154,9 +142,38 @@ namespace EmployeeMangementForm
             }
         }
 
-      
-}
-    
+        private void AboutPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        
+       
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+             Application.Exit();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+       
+
+    }
+
+
 
 
 }

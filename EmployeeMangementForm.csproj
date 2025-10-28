@@ -121,6 +121,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -152,8 +153,17 @@
     <Folder Include="Lib\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8-close-24.png" />
+    <None Include="Resources\icons8-bar-chart-20.png" />
+    <None Include="Resources\icons8-create-25.png" />
+    <None Include="Resources\icons8-view-24.png" />
+    <None Include="Resources\icons8-insert-table-24.png" />
+    <None Include="Resources\icons8-close-15.png" />
+    <None Include="Resources\icons8-close-15 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="sqleet.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
