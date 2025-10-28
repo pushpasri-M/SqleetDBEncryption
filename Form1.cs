@@ -16,7 +16,7 @@ namespace EmployeeMangementForm
         {
         public Form1()
         {
-             InitializeComponent();
+            InitializeComponent();
             // Open DB
             DatabaseManager.InitializeDatabase();
         }
@@ -37,15 +37,15 @@ namespace EmployeeMangementForm
             }
 
         }
-            private void hidePannel()
-            {
+        private void hidePannel()
+        {
                 HomePannel.Visible = false;
                 AboutPanel.Visible = false;
 
-            }
+        }
            
-            private void SetActiveButton(System.Windows.Forms.Button activeBtn)
-            {
+        private void SetActiveButton(System.Windows.Forms.Button activeBtn)
+        {
                 // Reset colors
                 button2.BackColor = Color.Black;
                 button3.BackColor = Color.Black;
@@ -53,13 +53,13 @@ namespace EmployeeMangementForm
 
                 // Highlight active
                 activeBtn.BackColor = Color.Gray;
-            }
-            private void ApplyModernStyle(DataGridView dgv)
-            {
-            dgv.AllowUserToAddRows = false;
-            dgv.ReadOnly = true;
+        }
+        private void ApplyModernStyle(DataGridView dgv)
+        {
+                dgv.AllowUserToAddRows = false;
+                dgv.ReadOnly = true;
 
-            dgv.EnableHeadersVisualStyles = false;
+                dgv.EnableHeadersVisualStyles = false;
                 dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dgv.BorderStyle = BorderStyle.None;
                 dgv.CellBorderStyle = DataGridViewCellBorderStyle.None;
@@ -92,7 +92,7 @@ namespace EmployeeMangementForm
                     col.HeaderCell.Style.Font = new Font("Segoe UI", 12, FontStyle.Bold);
                     col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 }
-            }
+        }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
@@ -142,21 +142,9 @@ namespace EmployeeMangementForm
             }
         }
 
-        private void AboutPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-        
-       
-
         private void button4_Click(object sender, EventArgs e)
         {
              Application.Exit();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -164,16 +152,6 @@ namespace EmployeeMangementForm
 
 
         }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
-       
-
-    }
-
-
-
 
 }

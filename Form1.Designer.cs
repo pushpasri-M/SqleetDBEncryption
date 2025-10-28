@@ -111,7 +111,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(141, 425);
             this.panel2.TabIndex = 1;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+
             // 
             // button3
             // 
@@ -259,7 +259,7 @@
             this.AboutPanel.Name = "AboutPanel";
             this.AboutPanel.Size = new System.Drawing.Size(695, 425);
             this.AboutPanel.TabIndex = 0;
-            this.AboutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.AboutPanel_Paint);
+            
             // 
             // label6
             // 
@@ -280,7 +280,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(564, 333);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+
             // 
             // Form1
             // 

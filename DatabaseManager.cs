@@ -90,7 +90,7 @@ namespace EmployeeMangementForm
             int rc = SqleetWrapper.sqlite3_prepare_v2(_db, sql, -1, out stmt, IntPtr.Zero);
             if (rc != 0 || stmt == IntPtr.Zero)
                 throw new Exception("Failed to prepare SELECT. rc=" + rc);
-
+             
             try
             {
                 const int SQLITE_ROW = 100;
